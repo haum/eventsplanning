@@ -1,27 +1,27 @@
 Talksplanning
 =============
 
-HAUM has a registration website for talks and events. This repo is the app for talks planning.
+HAUM has a registration website for events. This repo is the app for events planning.
 
 Usage
 -----
 
-Just add it to your repo's submodules or git-clone/dowload it to your project:
+Just add it to your repo's submodules or git-clone/download it to your project:
 
 ### Submodule Way
 
-	$ git submodule add https://github.com/haum/talksplanning talksplanning
+	$ git submodule add https://github.com/haum/eventsplanning eventsplanning
 
 ### Git Clone Hard
 
-	$ git clone https://github.com/haum/talksplanning
+	$ git clone https://github.com/haum/eventsplanning
 
 Then, add this new app to your `INSTALLED_APPS`
 
 	INSTALLED_APPS = (
 		# ...
 
-		'talksplanning',
+		'eventsplanning',
 	)
 
 Redirect URLS :
@@ -29,5 +29,5 @@ Redirect URLS :
 	urlpatterns = patterns('',
 		# ...
 		# do NOT change namespace
-		url(r'^batch/', include('talksplanning.urls', namespace="talksplanning")),
+		url(r'^event/', include('eventsplanning.urls', namespace="eventsplanning")),
 	)
